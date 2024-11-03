@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dt. Berkhan Demir</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Link to your stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section>
+      <nav class="navbar bg-blur fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Left: Brand Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="Images/full-logo-h.png"
+              alt="Doctor Demir Logo"
+              class="navbar-logo"
+            />
+          </a>
+
+          <!-- Center: Collapsible Content -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarContent"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="index.html"
+                  id="homeLink"
+                  data-translate="navbar-home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="services.html"
+                  id="servicesLink"
+                  data-translate="navbar-services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contact-us.html"
+                  id="contactLink"
+                  data-translate="navbar-contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="languageDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    id="selectedFlag"
+                    src="Images/flag-en.svg"
+                    alt="Language"
+                    width="20"
+                    height="15"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="languageDropdown"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('en')"
+                      ><img
+                        src="Images/flag-en.svg"
+                        alt="English"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('tr')"
+                      ><img
+                        src="Images/flag-tr.svg"
+                        alt="Türkçe"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Appointment Button and Toggler -->
+          <div class="d-flex align-items-center">
+            <a
+              href="https://www.doktortakvimi.com/berkhan-demir-2/dis-hekimi/trabzon"
+              target="_blank"
+              class="btn appointment-button ms-3"
+              data-translate="appointment"
+              >Appointment</a
+            >
+            <button
+              class="navbar-toggler ms-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarContent"
+              aria-controls="navbarContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="image-section">
+      <img
+        src="Images/carousel-1.jpeg"
+        alt="Image of the doctor"
+        class="background-image"
+      />
+      <div class="text-overlay">
+        <h2 data-translate="carousel-1-title">Your Title Here</h2>
+        <p data-translate="carousel-1-description">
+          Your description goes here. This can be a brief message about the
+          clinic or a welcoming statement.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="container my-4">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/asthetics.jpeg"
+                  class="card-img-top"
+                  alt="asthetics Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-1-title"
+                  >Asthetics</a
+                >
+                <p class="card-text" data-translate="card-1-description"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/implant.png"
+                  class="card-img-top"
+                  alt="implant Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-2-title"
+                  >implant</a
+                >
+                <p class="card-text" data-translate="card-2-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Card 3 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/lamine-veneer.jpeg"
+                  class="card-img-top"
+                  alt="Lamine veneer Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-3-title"
+                  >Lamine veneer</a
+                >
+                <p class="card-text" data-translate="card-3-description"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/teeth-whitening.jpeg"
+                  class="card-img-top"
+                  alt="Teeth whitening Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-4-title"
+                  >Teeth whitening </a
+                >
+                <p class="card-text" data-translate="card-4-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Card 5 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/orthodontics.jpeg"
+                  class="card-img-top"
+                  alt="Orthodontics Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-5-title"
+                  >Orthodontics</a
+                >
+                <p class="card-text" data-translate="card-5-description"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/endodontics.jpeg"
+                  class="card-img-top"
+                  alt="Endodontics Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-6-title"
+                  >Endodontics</a
+                >
+                <p class="card-text" data-translate="card-6-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Card 7 -->
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <div class="card" style="width: 100%; border-radius: 0">
+              <div class="image-wrapper">
+                <img
+                  src="Images/pedodontics.jpeg"
+                  class="card-img-top"
+                  alt="Pedodontics Picture"
+                />
+              </div>
+              <div class="card-body">
+                <a href="#" class="btn btn-card" data-translate="card-7-title"
+                  >Pedodontics</a
+                >
+                <p class="card-text" data-translate="card-7-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="map-column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.728957835419!2d39.72864106963445!3d41.00521541027407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40643d10f0475349%3A0x7fd5b70a8d06264e!2sDi%C5%9F%20Hekimi%20Berkhan%20Demir!5e0!3m2!1str!2str!4v1730663077214!5m2!1str!2str"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="address-column">
+          <h2 data-translate="contact-info">Contact Information</h2>
+          
+          <div class="contact-item">
+            <a href="https://maps.app.goo.gl/UjeAha9jRWizfmJD7" target="_blank" class="contact-link"> <!-- Replace with your actual address -->
+              <img src="Images/pin.png" alt="Address Icon" class="contact-icon"> <!-- Address icon -->
+              <p data-translate="contact-address">Address</p>
+            </a>
+          </div>
+          
+          <div class="contact-item">
+            <a href="tel:+904623236100" class="contact-link"> <!-- Phone 1 link -->
+              <img src="Images/phone.png" alt="Phone Icon" class="contact-icon"> <!-- Phone icon -->
+              <p data-translate="contact-phone-1">Phone 1: +90 462 323 61 00</p>
+            </a>
+          </div>
+          
+          <div class="contact-item">
+            <a href="tel:+905355636915" class="contact-link"> <!-- Phone 2 link -->
+              <img src="Images/phone.png" alt="Phone Icon" class="contact-icon"> <!-- Phone icon -->
+              <p data-translate="contact-phone-2">Phone 2: +90 535 563 69 15</p>
+            </a>
+          </div>
+          
+          <div class="contact-item">
+            <a href="https://www.instagram.com/dt.berkhandemir/" target="_blank" class="contact-link"> <!-- Replace with your Instagram link -->
+              <img src="Images/instagram.png" alt="Instagram Icon" class="contact-icon"> <!-- Instagram icon -->
+              <p data-translate="contact-instagram">dt.berkhandemir</p> <!-- Replace with your Instagram username -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-auto py-1">
+      <p data-translate="copyright">Copyright 2020 © Diş Hekimi Berkhan Demir</p>
+    </footer>
+    <section>
+      <a
+        href="https://wa.me/905355636915"
+        class="whatsapp-button"
+        target="_blank"
+      >
+        <img src="Images/wa-logo.png" alt="WhatsApp" />
+      </a>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/language-switch.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

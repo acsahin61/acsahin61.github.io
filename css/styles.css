@@ -1,0 +1,498 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.container {
+  padding-left: 1rem; /* Adjust to match your card section spacing */
+  padding-right: 1rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #feffff; /* Set text color if needed */
+}
+
+.container-fluid {
+  max-width: 1200px; /* Set a maximum width for the navbar */
+  margin: 0 auto; /* Center the navbar */
+}
+
+/* Navbar logo height */
+.navbar-logo {
+  height: 22px; /* Default height for small screens */
+}
+
+/* For large screens (desktops) */
+@media (min-width: 992px) {
+  .navbar-logo {
+    height: 24px; /* Height for large devices */
+  }
+
+  .container-carousel {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Set navbar background and text colors */
+.dropdown-menu {
+  background-color: #17171b !important; /* Dark background color */
+}
+
+.bg-blur {
+  background: rgba(23, 27, 27, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-toggle,
+.dropdown-item {
+  color: #feffff !important; /* Light foreground color for text and links */
+}
+
+/* Hover and active state for dropdown items */
+.dropdown-item:hover,
+.dropdown-item:active {
+  background-color: #feffff; /* Light hover background */
+  color: #17171b; /* Dark text on hover */
+}
+
+/* General navbar item styling */
+.nav-item,
+.nav-link {
+  letter-spacing: 2px;
+  font-weight: 100; /* Light weight for non-active items */
+  font-size: 14px;
+}
+
+/* Bold font weight for active (current) page */
+.nav-item .nav-link.active {
+  font-weight: 400; /* Bold weight for active link */
+}
+
+/* Medium font weight on hover */
+.nav-item .nav-link:hover:not(.active) {
+  font-weight: 200; /* Semi-bold weight on hover */
+}
+
+/* Spacing for the link items in navbar*/
+.navbar .nav-item {
+  margin-right: 45px; /* Adjust the spacing as needed */
+}
+
+.navbar .nav-item:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.carousel-item {
+  width: 100%; /*width you want*/
+  height: 600px; /*height you want*/
+  overflow: hidden;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Border remove*/
+.dropdown-menu,
+.card {
+  border: none !important; /* Remove border from dropdown menu */
+}
+
+.dropdown-menu {
+  min-width: 56px !important; /* Use only necessary width */
+  padding: 0; /* Remove default padding */
+  background-color: #2c2c2e !important; /* Lighter background color */
+}
+
+.dropdown-item {
+  padding: 8px 12px; /* Adjust padding for dropdown items */
+}
+
+/* Center the items in the menu*/
+ul.dropdown-menu > li {
+  text-align: center;
+}
+
+/* Appointment Button */
+.appointment-button {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Translucent button background */
+  color: #17171b !important; /* Match navbar text color */
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0; /* Remove letter spacing */
+}
+
+.appointment-button:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+}
+
+/* Desktop Layout */
+@media (min-width: 992px) {
+  /* Targeting large screens */
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar .navbar-brand {
+    margin-right: auto;
+  }
+
+  .navbar-nav {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+
+  .appointment-button {
+    margin-left: 20px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 991px) {
+  /* Targeting small and medium screens */
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+  }
+
+  .navbar-brand {
+    order: 0;
+  }
+
+  .appointment-button {
+    order: 1;
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-left: 4px; /* Add some spacing to the left of the button */
+  }
+
+  .navbar-toggler {
+    order: 2;
+  }
+
+  /* Center-align collapsed navbar items */
+  #navbarContent .navbar-nav {
+    text-align: center;
+  }
+}
+
+/* Left-align navbar items within the collapsed menu for mobile */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: left;
+  }
+  .navbar-nav .nav-item {
+    text-align: left;
+    width: 100%; /* Make each item take full width */
+  }
+}
+
+/* Remove border-radius from the card */
+.card {
+  border-radius: 0; /* Removes the corner radii from cards */
+}
+
+/* Add spacing between card elements */
+.card-body {
+  margin: 15px;
+  padding: 15px; /* Add padding to the card body */
+}
+
+/* Desktop-specific styling */
+@media (min-width: 992px) {
+  /* Adjust the breakpoint as necessary */
+  .image-wrapper {
+    width: 100%;
+    height: 400px; /* Set a uniform height for images on larger screens */
+    overflow: hidden; /* Hides any overflow from images that exceed bounds */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image scales to fill the container while maintaining aspect ratio */
+    border-radius: 0;
+  }
+}
+
+/* Small screens styling (mobile view) */
+@media (max-width: 991px) {
+  /* Applies on smaller screens */
+  .image-wrapper {
+    width: 100%;
+    height: auto; /* Allows images to retain their natural height */
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto; /* Retain natural height on mobile */
+    object-fit: contain; /* Keeps the original aspect ratio */
+    border-radius: 0;
+  }
+}
+
+/* Button Styles for Card Buttons Only */
+.btn-card {
+  background-color: black; /* Set button background color to black */
+  color: white; /* Set button text color to white */
+  border: none; /* Remove button border */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 10px 20px; /* Add some padding for better size */
+  width: 100%; /* Make button full width */
+  text-align: center; /* Center text within the button */
+  margin-bottom: 10px; /* Space between button and description */
+  border-radius: 0;
+}
+
+/* Container for the image and overlay text */
+.image-section {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Overlay container */
+.text-overlay {
+  position: absolute;
+  bottom: 0px; /* Align to the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: rgba(255, 255, 255, 0.95); /* almost white */
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* For small screens (phones) */
+@media (max-width: 991px) {
+  .image-section {
+    padding-top: 3rem;
+  }
+
+  .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure image covers area */
+  }
+
+  .text-overlay {
+    position: relative; /* Change to relative for stacking */
+    background-color: rgba(255, 255, 255, 0.95); /* almost white */
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Space between image and text */
+  }
+}
+
+/* Background image */
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Title and description styling */
+.text-overlay h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #000;
+  margin: 0 0 10px;
+}
+
+.text-overlay p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #000;
+  margin: 0px;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #25d366; /* WhatsApp green color */
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px; /* Padding inside the button */
+  z-index: 1000; /* Ensure it stays above other elements */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* WhatsApp button hover effect */
+.whatsapp-button:hover {
+  background-color: #128c7e; /* Darker green on hover */
+}
+
+/* WhatsApp icon styling */
+.whatsapp-button img {
+  width: 40px; /* Size of the icon */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Contact section styles */
+.contact-section {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Stack columns vertically for mobile */
+  align-items: center;
+}
+
+.map-column {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Max width for the map */
+  margin-bottom: 2rem; /* Space below the map */
+}
+
+.address-column {
+  text-align: center; /* Center align text */
+  max-width: 600px; /* Max width for address */
+}
+
+/* Contact section styles */
+.contact-section {
+    background-color: #1a1a1a; /* Almost black background */
+    color: #ffffff; /* White text color */
+}
+
+@media (min-width: 768px) {
+    .contact-section {
+        padding: 6rem;
+    }
+}
+
+/* Ensures text color is white for all child elements */
+.contact-section h2,
+.contact-section p {
+    color: #ffffff; /* White text color for headings and paragraphs */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack columns vertically for mobile */
+    align-items: center;
+}
+
+.map-column {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Max width for the map */
+    margin-bottom: 2rem; /* Space below the map */
+}
+
+.address-column {
+    text-align: left; /* Align text to the left */
+    max-width: 600px; /* Max width for address */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive map adjustment for mobile */
+@media (max-width: 768px) {
+    .map-column {
+        position: relative;
+        height: 0; /* Set height to 0 */
+        padding-bottom: 100%; /* 100% of width to create a square */
+    }
+    
+    .map-column iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        border: 0; /* Remove border */
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row; /* Change to horizontal on larger screens */
+        justify-content: space-between; /* Space out columns */
+    }
+    
+    .map-column, .address-column {
+        width: 48%; /* Adjust width of columns */
+    }
+}
+
+.footer {
+    background-color: #333; /* Dark grey background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 0.1rem; /* Padding for spacing */
+    position: relative; /* Keep footer in the document flow */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Full width */
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.contact-item {
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 1rem; /* Space between items */
+}
+
+.contact-icon {
+    width: 20px; /* Adjust to your desired icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+/* Additional styles for better text readability */
+.contact-item p {
+    line-height: 1.5; /* Adjust line height for better vertical alignment */
+    margin: 0; /* Remove any default margins */
+}
+
+.contact-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from parent */
+    display: flex; /* Ensure flex layout remains */
+    align-items: center; /* Align icon and text vertically */
+}
+.contact-link:hover {
+    text-decoration: underline; /* Optional: Add underline on hover for better UX */
+}
