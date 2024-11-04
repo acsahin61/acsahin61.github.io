@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dt. Berkhan Demir</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Link to your stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    style="
+      background-color: #1a1a1a;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    "
+  >
+    <section>
+      <nav class="navbar bg-blur fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Left: Brand Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="Images/full-logo-h.png"
+              alt="Doctor Demir Logo"
+              class="navbar-logo"
+            />
+          </a>
+
+          <!-- Center: Collapsible Content -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarContent"
+          >
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="index.html"
+                  id="homeLink"
+                  data-translate="navbar-home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="services.html"
+                  id="servicesLink"
+                  data-translate="navbar-services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contact-us.html"
+                  id="contactLink"
+                  data-translate="navbar-contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="languageDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    id="selectedFlag"
+                    src="Images/flag-en.svg"
+                    alt="Language"
+                    width="20"
+                    height="15"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="languageDropdown"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('tr')"
+                      ><img
+                        src="Images/flag-tr.svg"
+                        alt="Türkçe"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('en')"
+                      ><img
+                        src="Images/flag-en.svg"
+                        alt="English"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-ae.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-kw.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-qa.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-sa.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Appointment Button and Toggler -->
+          <div class="d-flex align-items-center">
+            <a
+              href="https://www.doktortakvimi.com/berkhan-demir-2/dis-hekimi/trabzon"
+              target="_blank"
+              class="btn appointment-button ms-3"
+              data-translate="appointment"
+              >Appointment</a
+            >
+            <button
+              class="navbar-toggler ms-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarContent"
+              aria-controls="navbarContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="border-color: gray"
+            >
+              <span
+                class="navbar-dark navbar-toggler-icon"
+                style="height: 18px"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="contact-section" style="padding-top: 5rem; flex: 1">
+      <div class="contact-container">
+        <div class="map-column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.728957835419!2d39.72864106963445!3d41.00521541027407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40643d10f0475349%3A0x7fd5b70a8d06264e!2sDi%C5%9F%20Hekimi%20Berkhan%20Demir!5e0!3m2!1str!2str!4v1730663077214!5m2!1str!2str"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="address-column">
+          <h2 data-translate="contact-info">Contact Information</h2>
+          <p data-translate="contact-address">Address</p>
+          <p data-translate="contact-phone-1">Phone 1: +90 462 323 61 00</p>
+          <p data-translate="contact-phone-2">Phone 2: +90 535 563 69 15</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-auto py-1">
+      <p data-translate="copyright">
+        Copyright 2020 © Diş Hekimi Berkhan Demir
+      </p>
+    </footer>
+    <section>
+      <a
+        href="https://wa.me/905355636915"
+        class="whatsapp-button"
+        target="_blank"
+      >
+        <img src="Images/wa-logo.png" alt="WhatsApp" />
+      </a>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/language-switch.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
