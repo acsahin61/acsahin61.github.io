@@ -200,12 +200,18 @@ ul.dropdown-menu > li {
 
 /* Left-align navbar items within the collapsed menu for mobile */
 @media (max-width: 992px) {
-  .navbar-nav {
+  .navbar-nav .nav-item {
+    width: 100%; /* Make each item take full width */
+  }
+
+  /* Default left alignment for English and Turkish */
+  .navbar-left-align .nav-item {
     text-align: left;
   }
-  .navbar-nav .nav-item {
-    text-align: left;
-    width: 100%; /* Make each item take full width */
+
+  /* Right alignment for Arabic */
+  .navbar-right-align .nav-item {
+    text-align: right;
   }
 }
 
@@ -390,109 +396,110 @@ ul.dropdown-menu > li {
 
 /* Contact section styles */
 .contact-section {
-    background-color: #1a1a1a; /* Almost black background */
-    color: #ffffff; /* White text color */
+  background-color: #1a1a1a; /* Almost black background */
+  color: #ffffff; /* White text color */
 }
 
 @media (min-width: 768px) {
-    .contact-section {
-        padding: 6rem;
-    }
+  .contact-section {
+    padding: 6rem;
+  }
 }
 
 /* Ensures text color is white for all child elements */
 .contact-section h2,
 .contact-section p {
-    color: #ffffff; /* White text color for headings and paragraphs */
+  color: #ffffff; /* White text color for headings and paragraphs */
 }
 
 .contact-container {
-    display: flex;
-    flex-direction: column; /* Stack columns vertically for mobile */
-    align-items: center;
+  display: flex;
+  flex-direction: column; /* Stack columns vertically for mobile */
+  align-items: center;
 }
 
 .map-column {
-    width: 100%; /* Full width */
-    max-width: 600px; /* Max width for the map */
-    margin-bottom: 2rem; /* Space below the map */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Max width for the map */
+  margin-bottom: 2rem; /* Space below the map */
 }
 
 .address-column {
-    text-align: left; /* Align text to the left */
-    max-width: 600px; /* Max width for address */
-    margin: 0 auto;
-    padding: 0 1rem;
+  text-align: left; /* Align text to the left */
+  max-width: 600px; /* Max width for address */
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Responsive map adjustment for mobile */
 @media (max-width: 768px) {
-    .map-column {
-        position: relative;
-        height: 0; /* Set height to 0 */
-        padding-bottom: 100%; /* 100% of width to create a square */
-    }
-    
-    .map-column iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        border: 0; /* Remove border */
-    }
+  .map-column {
+    position: relative;
+    height: 0; /* Set height to 0 */
+    padding-bottom: 100%; /* 100% of width to create a square */
+  }
+
+  .map-column iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: 0; /* Remove border */
+  }
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
-    .contact-container {
-        flex-direction: row; /* Change to horizontal on larger screens */
-        justify-content: space-between; /* Space out columns */
-    }
-    
-    .map-column, .address-column {
-        width: 48%; /* Adjust width of columns */
-    }
+  .contact-container {
+    flex-direction: row; /* Change to horizontal on larger screens */
+    justify-content: space-between; /* Space out columns */
+  }
+
+  .map-column,
+  .address-column {
+    width: 48%; /* Adjust width of columns */
+  }
 }
 
 .footer {
-    background-color: #333; /* Dark grey background */
-    color: white; /* White text */
-    text-align: center; /* Center the text */
-    padding: 0.1rem; /* Padding for spacing */
-    position: relative; /* Keep footer in the document flow */
-    bottom: 0; /* Position at the bottom of the page */
-    width: 100%; /* Full width */
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
+  background-color: #333; /* Dark grey background */
+  color: white; /* White text */
+  text-align: center; /* Center the text */
+  padding: 0.1rem; /* Padding for spacing */
+  position: relative; /* Keep footer in the document flow */
+  bottom: 0; /* Position at the bottom of the page */
+  width: 100%; /* Full width */
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 
 .contact-item {
-    display: flex; /* Use flexbox to align icon and text */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 1rem; /* Space between items */
+  display: flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 1rem; /* Space between items */
 }
 
 .contact-icon {
-    width: 20px; /* Adjust to your desired icon size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 0.5rem; /* Space between icon and text */
+  width: 20px; /* Adjust to your desired icon size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem; /* Space between icon and text */
 }
 
 /* Additional styles for better text readability */
 .contact-item p {
-    line-height: 1.5; /* Adjust line height for better vertical alignment */
-    margin: 0; /* Remove any default margins */
+  line-height: 1.5; /* Adjust line height for better vertical alignment */
+  margin: 0; /* Remove any default margins */
 }
 
 .contact-link {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit text color from parent */
-    display: flex; /* Ensure flex layout remains */
-    align-items: center; /* Align icon and text vertically */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color from parent */
+  display: flex; /* Ensure flex layout remains */
+  align-items: center; /* Align icon and text vertically */
 }
 .contact-link:hover {
-    text-decoration: underline; /* Optional: Add underline on hover for better UX */
+  text-decoration: underline; /* Optional: Add underline on hover for better UX */
 }

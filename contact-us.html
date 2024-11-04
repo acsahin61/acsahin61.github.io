@@ -21,7 +21,14 @@
     />
   </head>
 
-  <body style="background-color: #1a1a1a; height: 100%; display: flex; flex-direction: column;">
+  <body
+    style="
+      background-color: #1a1a1a;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    "
+  >
     <section>
       <nav class="navbar bg-blur fixed-top navbar-expand-lg">
         <div class="container-fluid">
@@ -92,6 +99,18 @@
                     <a
                       class="dropdown-item"
                       href="#"
+                      onclick="setLanguage('tr')"
+                      ><img
+                        src="Images/flag-tr.svg"
+                        alt="Türkçe"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
                       onclick="setLanguage('en')"
                       ><img
                         src="Images/flag-en.svg"
@@ -104,10 +123,46 @@
                     <a
                       class="dropdown-item"
                       href="#"
-                      onclick="setLanguage('tr')"
+                      onclick="setLanguage('ar')"
                       ><img
-                        src="Images/flag-tr.svg"
-                        alt="Türkçe"
+                        src="Images/flag-ae.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-kw.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-qa.svg"
+                        alt="Arabic"
+                        width="20"
+                        height="15"
+                    /></a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="setLanguage('ar')"
+                      ><img
+                        src="Images/flag-sa.svg"
+                        alt="Arabic"
                         width="20"
                         height="15"
                     /></a>
@@ -134,14 +189,18 @@
               aria-controls="navbarContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              style="border-color: gray"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span
+                class="navbar-dark navbar-toggler-icon"
+                style="height: 18px"
+              ></span>
             </button>
           </div>
         </div>
       </nav>
     </section>
-    <section class="contact-section" style="padding-top: 5rem; flex: 1;">
+    <section class="contact-section" style="padding-top: 5rem; flex: 1">
       <div class="contact-container">
         <div class="map-column">
           <iframe
